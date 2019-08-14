@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+*{
+	margin:0;
+	padding:0;
+}
+body,html{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+body{
+	background-color:#f5f6fa;
+	font-family: 'Chakra Petch', sans-serif;
+}
+.navbar{
+	width:100%;
+	height:10%;
+	background:#c23616;
+}
+.container{
+	width:80%;
+	margin:auto;
+	display:flex;
+	height:100%;
+}
+.brand{
+	display:flex;
+	justify-content:flex-start;
+	width:100%;
+	align-items:center;
+	flex:1;
+	color:#d7d7d8;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.list-group{
+	display:flex;
+	justify-content:space-around;
+	flex:2;
+	align-items:center;
+	list-style-type: none;
+}
+.list-group li a{
+	text-decoration:none;
+	color:#f5f6fa;
+}
+.list-group li a:hover{
+	color:#7f8fa6;
+}
+.burger{
+	display:none;
+}
+
+@keyframes slide{
+	from {
+		transform:translateX(100%);
+	}
+	to {
+		transform:translateX(0%);
+	}
+}
+@keyframes slide2{
+	from {
+		transform:translateX(0%);
+	}
+	to {
+		transform:translateX(100%);
+	}
+}
+
+@keyframes rotate1{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(45deg);
+	}
+}
+@keyframes rotate2{
+	from{
+		transform:rotate(0 deg);
+	}
+	to{
+		transform:rotate(-45deg) translate(7px,-7px);
+	}
+}
+@keyframes rotate3{
+	from{
+		transform:rotate(45deg);
+	}
+	to{
+		transform:rotate(0deg);
+	}
+}
+@keyframes rotate4{
+	from{
+		transform:rotate(-45deg) translate(7px,-7px);
+	}
+	to{
+		transform:rotate(0deg);
+	}
+}
+
+@media screen and (max-width:700px){
+	.list-group{
+		flex-direction: column;
+		position:absolute;
+		right:0%;
+		top:10%;
+		background-color:#c23616;
+		height:90%;
+		width:50%;
+		transform:translateX(100%);
+		/*animation:slide 2s ease;*/
+	}
+	.burger{
+		display:block;
+		height:20px;
+		width:20px;
+		margin-top:23px;
+		display:flex;
+		flex-direction: column;
+		justify-content:space-around;
+		cursor:pointer;
+	}
+	.burger-1{
+		width:100%;
+		height:2px;
+		background:white;
+	}
+	.burger-2{
+		width:100%;
+		height:2px;
+		background:white;
+	}
+	.burger-3{
+		width:100%;
+		height:2px;
+		background:white;
+	}
+}
